@@ -1,28 +1,48 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-app-bar app>
+
+      <!-- toolbar begins -->
+      <v-toolbar-title class="headline text-uppercase">
+        <a href="/">
+          <span>motoEBikes</span>
+        <span class="font-weight-light"> platform</span>
+        </a>
+        
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn
+        text
+        href="#"
+        target="_blank"
+      >
+        <span class="mr-2">v1.0</span>
+      </v-btn>
+    </v-app-bar>
+    <!-- toolbar ends -->
+    
+    <v-content>
+      <router-view />
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    
+  },
+  data: () => ({
+    //
+  }),
+};
 </script>
-
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+a{
+  text-decoration: none;
+  color:inherit;
 }
 </style>
+
