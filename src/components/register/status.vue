@@ -1,28 +1,21 @@
 <template>
  
-<div>
+<v-card class="pa-5 ma-2" elevation="12">
     <v-layout pa-1 wrap text-left  v-for="n in statusTypes" :key="n.id">
-      
-
-        <v-flex xs12 md12 offset-md1 >         
+        <v-flex xs12 md12 >         
             <v-select :items="['Bueno', 'Regular', 'Malo']" :label="n.name"  v-model="registeredStatus[n.id].status">
             </v-select>
             <v-text-field v-if="registeredStatus[n.id].status !== 'Bueno' && registeredStatus[n.id].status != ''" label="Observaciones" placeholder="escriba un comentario aquí"></v-text-field>
         </v-flex>
+    </v-layout>
 
-      
-      
-    </v-layout>
     <v-layout pa-1 wrap text-left  v-for="n in batteryStatus" :key="n.id">
-    <v-flex xs12 md12 offset-md1 >         
-                
-                <v-text-field type="number" :label="`${n.name} (Voltaje)`" placeholder="voltaje"></v-text-field>
-            </v-flex>
+        <v-flex xs12 md12> 
+            <v-text-field type="number" :label="`${n.name} (Voltaje)`" placeholder="voltaje"></v-text-field>
+        </v-flex>
     </v-layout>
     
-   
-    
-  </div>
+    </v-card>
 </template>
 
 <script>

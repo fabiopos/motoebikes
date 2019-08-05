@@ -5,24 +5,28 @@
     <v-layout pa-1 wrap text-left>
 
       <v-flex xs12 sm12 md3>
-         <v-icon>person</v-icon>
-        <v-text-field v-model="name" :counter="10" label="Nombres" required></v-text-field>
-        <v-text-field v-model="lastName" :counter="10" label="Apellidos" required></v-text-field>
-        <v-text-field v-model="email" label="E-mail" required></v-text-field>
+        <v-card class="pa-5 ma-2" elevation="12">          
+          <v-text-field append-icon="person" v-model="name" :counter="10" label="Nombres" required></v-text-field>
+          <v-text-field append-icon="person" v-model="lastName" :counter="10" label="Apellidos" required></v-text-field>
+          <v-text-field append-icon="email" v-model="email" label="E-mail" required></v-text-field>
+        </v-card>
       </v-flex>
+      
 
       <v-flex xs12 sm12 md3 offset-sm1 >
-        <v-icon>credit_card</v-icon>
-        <v-select v-model="idType" :items="idTypes" label="Tipo de documento" required></v-select>
-        <v-text-field v-model="identification" :counter="10" label="Número de documento" required></v-text-field>
-        <v-text-field v-model="city" :counter="10" label="Ciudad de residencia" required></v-text-field>
+        <v-card class="pa-5 ma-2" elevation="12">        
+          <v-select append-icon="assignment_ind" v-model="idType" :items="idTypes" label="Tipo de documento" required></v-select>
+          <v-text-field type="number" append-icon="assignment_ind" v-model="identification" :counter="10" label="Número de documento" required></v-text-field>
+          <v-text-field append-icon="assignment_ind" v-model="city" :counter="10" label="Ciudad de residencia" required></v-text-field>
+        </v-card>
 
       </v-flex>
       <v-flex xs12 md3 offset-sm1>
-        <v-icon>place</v-icon>
-        <v-text-field v-model="address" label="Dirección"></v-text-field>
-        <v-text-field type="number" v-model="phone" label="Teléfono fijo" ></v-text-field>
-        <v-text-field type="number" v-model="cellphone" label="Teléfono celular" ></v-text-field>
+        <v-card class="pa-5 ma-2" elevation="12">        
+          <v-text-field append-icon="place" v-model="address" label="Dirección"></v-text-field>
+          <v-text-field append-icon="phone" type="number" v-model="phone" label="Teléfono fijo" ></v-text-field>
+          <v-text-field append-icon="phone" type="number" v-model="cellphone" label="Teléfono celular" ></v-text-field>
+        </v-card>
       </v-flex>
       
     </v-layout>

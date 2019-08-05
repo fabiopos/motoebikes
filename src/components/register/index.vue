@@ -15,8 +15,7 @@
 
         <v-layout text-center wrap>            
             <v-flex offset-sm2 xs12 md12 sm12 pa-5>
-                <h3 class="headline pa-1">  Descripción del producto</h3>
-                <v-icon>motorcycle</v-icon>
+                <h3 class="headline pa-1">  Datos básicos vehículo</h3>
                 <RegisterVehicle />
             </v-flex>
             <v-flex>
@@ -25,12 +24,9 @@
 
           <v-layout text-center wrap>            
             <v-flex offset-sm2 xs12 md12 sm12 pa-5>
-                <h3 class="headline pa-1">  Estado del vehículo</h3>
-                <v-icon>health</v-icon>
+                <h3 class="headline pa-1">  Estado del vehículo</h3>                
                 <RegisterVehicleStatus />
-            </v-flex>
-            <v-flex>
-            </v-flex>
+            </v-flex>            
         </v-layout>
 <v-layout text-right wrap mb-5>
     <v-flex>
